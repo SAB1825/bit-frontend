@@ -1,7 +1,24 @@
 {
-    "extends": "next/core-web-vitals",
-    "rules": {
-      "react/no-unescaped-entities": "off",
-      "@next/next/no-img-element": "off"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "react"],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-img-element": "off",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-key": "warn",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     }
   }
+}
